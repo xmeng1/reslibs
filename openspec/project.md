@@ -1,64 +1,64 @@
-# Project Context
+# 项目上下文
 
-## Purpose
-ResLibs Unity Platform is an automated Unity Asset resource sharing platform that aggregates and distributes content from Baidu Netdisk to monetized file hosting services. The platform provides a clean resource discovery interface for users and simplified publishing workflow for administrators, generating revenue through premium file hosting commissions and website advertising.
+## 项目目标
+ResLibs Unity 平台是一个自动化的 Unity 资源分享平台，实现从百度网盘到变现文件托管服务的内容聚合和分发。该平台为用户提供清洁的资源发现界面，为管理员提供简化的发布工作流程，通过高级文件托管佣金和网站广告产生收入。
 
-## Tech Stack
-- **Frontend**: Next.js 14+ (App Router), TypeScript, Tailwind CSS, Shadcn/UI
-- **Backend**: Next.js Server Actions, PostgreSQL, Prisma ORM, Clerk/NextAuth
-- **Automation**: Python 3.11+, Google Gemini API, BaiduPCS-Go
-- **Deployment**: Docker, Docker Compose, 1Panel, Vercel
-- **Infrastructure**: Linux VPS, Cloudflare R2
+## 技术栈
+- **前端**: Next.js 14+ (App Router)、TypeScript、Tailwind CSS、Shadcn/UI
+- **后端**: Next.js Server Actions、PostgreSQL、Prisma ORM、Clerk/NextAuth
+- **自动化**: Python 3.11+、Google Gemini API、BaiduPCS-Go
+- **部署**: Docker、Docker Compose、1Panel、Vercel
+- **基础设施**: Linux VPS、Cloudflare R2
 
-## Project Conventions
+## 项目约定
 
-### Code Style
-- Use TypeScript strict mode with proper type definitions
-- Follow Prettier configuration for consistent formatting
-- Use kebab-case for file names and PascalCase for components
-- Implement ESLint rules for code quality
-- Use conventional commits for version control
+### 代码风格
+- 使用 TypeScript 严格模式和适当的类型定义
+- 遵循 Prettier 配置以保持一致的格式
+- 文件名使用 kebab-case，组件使用 PascalCase
+- 实施 ESLint 规则以保证代码质量
+- 使用约定式提交进行版本控制
 
-### Architecture Patterns
-- **Microservices**: Separate web frontend and automation bot services
-- **API-first**: RESTful APIs with proper HTTP status codes
-- **Database**: Relational design with proper indexing
-- **File Storage**: Object storage for images, local temp for processing
-- **Error Handling**: Comprehensive error logging and retry mechanisms
+### 架构模式
+- **微服务**: 分离的 Web 前端和自动化机器人服务
+- **API 优先**: 具有适当 HTTP 状态代码的 RESTful API
+- **数据库**: 具有适当索引的关系设计
+- **文件存储**: 图像使用对象存储，处理使用本地临时存储
+- **错误处理**: 全面的错误日志记录和重试机制
 
-### Testing Strategy
-- Unit tests for business logic (Jest)
-- Integration tests for API endpoints
-- E2E tests for critical user workflows
-- Performance testing for file processing operations
-- Load testing for high-traffic scenarios
+### 测试策略
+- 业务逻辑单元测试（Jest）
+- API 端点集成测试
+- 关键用户工作流端到端测试
+- 文件处理操作性能测试
+- 高流量场景负载测试
 
-### Git Workflow
-- **Main branch**: Production-ready code
-- **Feature branches**: `feature/description` naming convention
-- **Conventional commits**: `type(scope): description` format
-- **Pull requests**: Required for all changes with peer review
-- **Automated CI**: Linting, testing, and deployment on merge
+### Git 工作流
+- **主分支**: 生产就绪代码
+- **功能分支**: `feature/description` 命名约定
+- **约定式提交**: `type(scope): description` 格式
+- **拉取请求**: 所有更改都需要同行评审
+- **自动化 CI**: 合并时的代码检查、测试和部署
 
-## Domain Context
-- **Unity Assets**: 3D models, textures, scripts, tools for Unity game engine
-- **File Hosting**: Monetized platforms like Rapidgator, Chengtong, Feimaoyun
-- **SEO Optimization**: Content generation for search engine visibility
-- **Resource Processing**: Download, extract, enhance, and distribute workflow
-- **User Experience**: Clean, resource-focused interface similar to koudaizy.com
+## 领域上下文
+- **Unity 资源**: Unity 游戏引擎的 3D 模型、纹理、脚本、工具
+- **文件托管**: 如 Rapidgator、诚通、飞猫云等变现平台
+- **SEO 优化**: 搜索引擎可见性的内容生成
+- **资源处理**: 下载、解压、增强和分发工作流
+- **用户体验**: 类似 koudaizy.com 的清洁、以资源为中心的界面
 
-## Important Constraints
-- **Cost Efficiency**: Use free tiers for APIs where possible (Gemini free tier)
-- **Performance**: Handle large file downloads and uploads efficiently
-- **Reliability**: Automated retry mechanisms for external service failures
-- **Security**: Proper API key management and file validation
-- **Scalability**: Container-based deployment for easy scaling
-- **Legal Compliance**: Respect terms of service for integrated platforms
+## 重要约束
+- **成本效率**: 尽可能使用 API 的免费层（Gemini 免费层）
+- **性能**: 高效处理大文件下载和上传
+- **可靠性**: 外部服务故障的自动重试机制
+- **安全性**: 适当的 API 密钥管理和文件验证
+- **可扩展性**: 基于容器的部署以便于扩展
+- **法律合规**: 尊重集成平台的服务条款
 
-## External Dependencies
-- **Baidu Netdisk**: Source file storage using BaiduPCS-Go
-- **Google Gemini API**: AI-powered content generation (gemini-1.5-flash/pro)
-- **File Hosting APIs**: Rapidgator (FTP), Chengtong (API/WebDAV), Feimaoyun (API)
-- **Cloudflare R2**: Image storage with S3-compatible API
-- **1Panel**: Server management and reverse proxy configuration
-- **Vercel**: Web application hosting and CI/CD
+## 外部依赖
+- **百度网盘**: 使用 BaiduPCS-Go 的源文件存储
+- **Google Gemini API**: AI 驱动的内容生成（gemini-1.5-flash/pro）
+- **文件托管 API**: Rapidgator (FTP)、诚通 (API/WebDAV)、飞猫云 (API)
+- **Cloudflare R2**: 具有兼容 S3 API 的图像存储
+- **1Panel**: 服务器管理和反向代理配置
+- **Vercel**: Web 应用程序托管和 CI/CD
