@@ -1,0 +1,141 @@
+// ResLibs 通用资源平台 - 数据库模式
+// 基于 openspec/specs/data-model/spec.md 规格设计
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// 资源类型实体
+model ResourceType {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  displayName String
+  description String?
+  icon        String?
+
+  // 配置信息
+  fileExtensions   String[] // 支持的文件扩展名
+  defaultMetadata Json     // 默认元数据字段定义
+  processingRules Json     // 处理规则配置
+  displayTemplate  String?  // 展示模板
+
+  // 关系
+  resources Resource[]
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 分类实体
+model Category {
+  id            String   @id @default(cuid())
+  name          String   @unique
+  slug          String   @unique
+  description   String?
+  icon          String?
+  parentId      String?
+
+  // 支持的资源类型
+  supportedTypes String[] // 支持的资源类型列表
+
+  // 关系
+  parent   Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children Category[] @relation("CategoryHierarchy")
+  resources Resource[]
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 标签实体
+model Tag {
+  id         String @id @default(cuid())
+  name       String @unique
+  color      String?
+  icon       String?
+
+  // 适用资源类型
+  resourceTypes String[] // 适用的资源类型
+
+  // 权重（用于排序）
+  weight Float @default(0)
+
+  // 关系
+  resources Resource[]
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 下载链接实体
+model DownloadLink {
+  id          String   @id @default(cuid())
+  provider    String   // 提供商名称
+  url         String   // 下载地址
+  price       String?  // 价格信息
+  platform    String?  // 适用平台
+  quality     String?  // 质量等级
+  isActive    Boolean  @default(true)
+  resourceId  String   // 关联资源ID
+
+  // 元数据
+  metadata Json? // 其他元数据信息
+
+  // 关系
+  resource Resource @relation(fields: [resourceId], references: [id])
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 通用资源实体
+model Resource {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String   // Markdown 格式的详细描述
+
+  // 基本信息
+  thumbnail   String?  // 缩略图 URL
+  fileSize    String?  // 文件大小
+  version     String?  // 版本信息
+
+  // 状态和分类
+  status      String   @default("draft") // draft, published, archived
+  publishedAt DateTime?
+
+  // 关系
+  typeId       String         @default("default")
+  type         ResourceType  @relation(fields: [typeId], references: [id])
+  categoryId   String
+  category     Category       @relation(fields: [categoryId], references: [id])
+  tags         Tag[]
+  downloadLinks DownloadLink[]
+
+  // 类型特定的元数据
+  metadata Json // 存储不同类型资源的特定元数据
+
+  // 预览内容
+  previews Json[] // 预览图像、视频等
+
+  // SEO 信息
+  metaTitle    String?
+  metaDescription String?
+  keywords     String?
+
+  // 统计信息
+  downloadCount Int @default(0)
+  viewCount     Int @default(0)
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

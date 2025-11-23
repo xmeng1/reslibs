@@ -88,3 +88,4 @@ ci/*.pub
 .Trashes
 ehthumbs.db
 Thumbs.db
+/generated/prisma
