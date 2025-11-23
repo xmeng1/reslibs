@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Next.js 13+ 默认启用 App Router，无需 experimental.appDir
   images: {
     domains: ['localhost'],
     remotePatterns: [
