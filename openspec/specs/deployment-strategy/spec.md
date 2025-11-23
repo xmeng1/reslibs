@@ -1,71 +1,71 @@
-# Deployment Strategy
+# 部署策略
 
-### Requirement: Infrastructure Setup
-The system SHALL run on a standardized Linux infrastructure with container orchestration.
+### 需求: 基础设施设置
+系统应在标准化的 Linux 基础设施上运行，并支持容器编排。
 
-#### Scenario: Base Infrastructure
-- **WHEN** setting up the deployment environment
-- **THEN** the system uses: Linux VPS with 1Panel management panel, PostgreSQL database via 1Panel, Docker & Docker Compose for containerization, domain `unity.reslibs.com`
+#### 场景: 基础基础设施
+- **当** 设置部署环境时
+- **那么** 系统使用：带有 1Panel 管理面板的 Linux VPS、通过 1Panel 的 PostgreSQL 数据库、Docker & Docker Compose 用于容器化、域名 `unity.reslibs.com`
 
-#### Scenario: Service Architecture
-- **WHEN** defining application services
-- **THEN** the system deploys: `web` service (Next.js frontend & backend), `bot` service (Python automation worker)
+#### 场景: 服务架构
+- **当** 定义应用程序服务时
+- **那么** 系统部署：`web` 服务（Next.js 前端 & 后端）、`bot` 服务（Python 自动化工作器）
 
-### Requirement: Multi-Environment Deployment
-The system SHALL support separate production and testing environments.
+### 需求: 多环境部署
+系统应支持独立的生产和测试环境。
 
-#### Scenario: Production Environment
-- **WHEN** deploying to production
-- **THEN** the system runs at `https://unity.reslibs.com` via 1Panel reverse proxy to localhost:3000 Docker container, with `NODE_ENV=production`
+#### 场景: 生产环境
+- **当** 部署到生产环境时
+- **那么** 系统在 `https://unity.reslibs.com` 运行，通过 1Panel 反向代理到 localhost:3000 Docker 容器，使用 `NODE_ENV=production`
 
-#### Scenario: Testing Environment
-- **WHEN** deploying for testing
-- **THEN** the system runs at `http://unity.reslibs.com:3001` with direct port exposure and SQLite database
+#### 场景: 测试环境
+- **当** 为测试部署时
+- **那么** 系统在 `http://unity.reslibs.com:3001` 运行，直接暴露端口并使用 SQLite 数据库
 
-### Requirement: Container Configuration
-The system SHALL use properly configured Docker containers for all services.
+### 需求: 容器配置
+系统应为所有服务使用正确配置的 Docker 容器。
 
-#### Scenario: Web Service Container
-- **WHEN** deploying the web application
-- **THEN** the container builds from project root, restarts automatically, exposes port 3000, uses environment file, mounts persistent volume for uploads
+#### 场景: Web 服务容器
+- **当** 部署 Web 应用程序时
+- **那么** 容器从项目根目录构建、自动重启、暴露端口 3000、使用环境文件、挂载上传的持久卷
 
-#### Scenario: Bot Service Container
-- **WHEN** deploying automation worker
-- **THEN** the container builds from dedicated Dockerfile.bot, restarts unless stopped, uses environment file, mounts volumes for downloads and uploads, does not expose ports externally
+#### 场景: Bot 服务容器
+- **当** 部署自动化工作器时
+- **那么** 容器从专用的 Dockerfile.bot 构建、除非停止否则重启、使用环境文件、挂载下载和上传的卷、不对外暴露端口
 
-### Requirement: Volume Management
-The system SHALL properly manage persistent data storage.
+### 需求: 卷管理
+系统应正确管理持久数据存储。
 
-#### Scenario: Upload Persistence
-- **WHEN** storing user uploads
-- **THEN** the system mounts `./public/uploads:/app/public/uploads` for persistent image storage
+#### 场景: 上传持久性
+- **当** 存储用户上传时
+- **那么** 系统挂载 `./public/uploads:/app/public/uploads` 用于持久图像存储
 
-#### Scenario: Temporary File Handling
-- **WHEN** processing downloads
-- **THEN** the bot container mounts `./temp_downloads:/app/temp` for temporary file storage
+#### 场景: 临时文件处理
+- **当** 处理下载时
+- **那么** bot 容器挂载 `./temp_downloads:/app/temp` 用于临时文件存储
 
-#### Scenario: Configuration Persistence
-- **WHEN** accessing external services
-- **THEN** the system mounts `~/.config/rclone:/root/.config/rclone` for Rclone configuration persistence
+#### 场景: 配置持久性
+- **当** 访问外部服务时
+- **那么** 系统挂载 `~/.config/rclone:/root/.config/rclone` 用于 Rclone 配置持久性
 
-### Requirement: Environment Configuration
-The system SHALL use environment-specific configurations.
+### 需求: 环境配置
+系统应使用特定环境的配置。
 
-#### Scenario: Environment Variable Management
-- **WHEN** configuring services
-- **THEN** both containers share the same `.env` file containing database URLs, API keys, and service credentials
+#### 场景: 环境变量管理
+- **当** 配置服务时
+- **那么** 两个容器共享相同的 `.env` 文件，包含数据库 URL、API 密钥和服务凭据
 
-#### Scenario: Network Configuration
-- **WHEN** setting up service networking
-- **THEN** containers share the same Docker network for internal communication
+#### 场景: 网络配置
+- **当** 设置服务网络时
+- **那么** 容器共享相同的 Docker 网络用于内部通信
 
-### Requirement: Deployment Automation
-The system SHALL support automated deployment processes.
+### 需求: 部署自动化
+系统应支持自动化部署过程。
 
-#### Scenario: Docker Compose Deployment
-- **WHEN** deploying the application
-- **THEN** administrators can run `docker compose up -d` to start all services
+#### 场景: Docker Compose 部署
+- **当** 部署应用程序时
+- **那么** 管理员可以运行 `docker compose up -d` 启动所有服务
 
-#### Scenario: Service Updates
-- **WHEN** updating the application
-- **THEN** the system supports rolling updates without significant downtime
+#### 场景: 服务更新
+- **当** 更新应用程序时
+- **那么** 系统支持滚动更新，无需显著停机时间

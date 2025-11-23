@@ -1,57 +1,57 @@
-# Data Model
+# 数据模型
 
-### Requirement: Post Entity Structure
-The system SHALL store resource posts with comprehensive metadata.
+### 需求: 文章实体结构
+系统应存储带有全面元数据的资源文章。
 
-#### Scenario: Core Post Information
-- **WHEN** creating a new resource entry
-- **THEN** the system stores: unique ID, title, URL slug, markdown content, optional thumbnail URL, preview image array
+#### 场景: 核心文章信息
+- **当** 创建新资源条目时
+- **那么** 系统存储：唯一 ID、标题、URL slug、markdown 内容、可选缩略图 URL、预览图像数组
 
-#### Scenario: Resource Metadata
-- **WHEN** storing Unity asset details
-- **THEN** the system captures: Unity version compatibility, file size, and relevant technical specifications
+#### 场景: 资源元数据
+- **当** 存储 Unity 资源详情时
+- **那么** 系统捕获：Unity 版本兼容性、文件大小和相关技术规格
 
-#### Scenario: Download Links Management
-- **WHEN** storing multiple hosting links
-- **THEN** the system uses JSON format to store provider, URL, and pricing information for each download option
+#### 场景: 下载链接管理
+- **当** 存储多个托管链接时
+- **那么** 系统使用 JSON 格式存储每个下载选项的提供商、URL 和定价信息
 
-#### Scenario: Categorization
-- **WHEN** organizing content
-- **THEN** each post belongs to one category and can have multiple tags for better discoverability
+#### 场景: 分类
+- **当** 组织内容时
+- **那么** 每篇文章属于一个分类，可以拥有多个标签以提高可发现性
 
-#### Scenario: Publication Status
-- **WHEN** managing post lifecycle
-- **THEN** the system tracks publication status with creation and update timestamps
+#### 场景: 发布状态
+- **当** 管理文章生命周期时
+- **那么** 系统跟踪发布状态以及创建和更新时间戳
 
-### Requirement: Category Entity Structure
-The system SHALL organize content into hierarchical categories.
+### 需求: 分类实体结构
+系统应将内容组织成分层分类。
 
-#### Scenario: Category Management
-- **WHEN** defining content categories
-- **THEN** each category has a unique ID, name, URL slug, and can contain multiple posts
+#### 场景: 分类管理
+- **当** 定义内容分类时
+- **那么** 每个分类有唯一 ID、名称、URL slug，可以包含多篇文章
 
-#### Scenario: Category Relationships
-- **WHEN** browsing content
-- **THEN** users can filter posts by category to find relevant Unity assets
+#### 场景: 分类关系
+- **当** 浏览内容时
+- **那么** 用户可以按分类筛选文章以查找相关的 Unity 资源
 
-### Requirement: Tag Entity Structure
-The system SHALL provide flexible tagging for content discovery.
+### 需求: 标签实体结构
+系统应提供灵活的标记功能以实现内容发现。
 
-#### Scenario: Tag Assignment
-- **WHEN** labeling content
-- **THEN** each tag has a unique ID and name, and can be applied to multiple posts
+#### 场景: 标签分配
+- **当** 标记内容时
+- **那么** 每个标签有唯一 ID 和名称，可以应用于多篇文章
 
-#### Scenario: Tag-Based Filtering
-- **WHEN** searching for specific content
-- **THEN** users can filter posts by tags to find specialized Unity assets
+#### 场景: 基于标签的筛选
+- **当** 搜索特定内容时
+- **那么** 用户可以按标签筛选文章以查找专业的 Unity 资源
 
-### Requirement: Database Schema Optimization
-The system SHALL use optimized database relationships for performance.
+### 需求: 数据库模式优化
+系统应使用优化的数据库关系以提高性能。
 
-#### Scenario: Many-to-Many Relationships
-- **WHEN** implementing post-tag relationships
-- **THEN** the database uses proper junction tables for efficient querying
+#### 场景: 多对多关系
+- **当** 实现文章-标签关系时
+- **那么** 数据库使用适当的连接表进行高效查询
 
-#### Scenario: Indexing Strategy
-- **WHEN** designing database indexes
-- **THEN** the system optimizes for common query patterns like slug lookups, category filtering, and tag searches
+#### 场景: 索引策略
+- **当** 设计数据库索引时
+- **那么** 系统针对常见查询模式进行优化，如 slug 查找、分类筛选和标签搜索

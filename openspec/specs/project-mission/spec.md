@@ -1,31 +1,31 @@
-# Project Mission
+# 项目使命
 
-### Requirement: ResLibs Unity Platform Mission
-The system SHALL provide an automated Unity Asset resource sharing platform that aggregates and distributes content from source storage to monetized storage.
+### 需求: ResLibs Unity 平台使命
+系统应提供一个自动化的 Unity 资源分享平台，实现从源存储到变现存储的内容聚合和分发。
 
-#### Scenario: Platform Purpose Definition
-- **WHEN** stakeholders review the project mission
-- **THEN** they understand the platform focuses on Unity Asset resource aggregation via `unity.reslibs.com`
+#### 场景: 平台目标定义
+- **当** 利益相关者审查项目使命时
+- **那么** 他们理解平台专注于通过 `unity.reslibs.com` 进行 Unity 资源聚合
 
-#### Scenario: Core Value Proposition
-- **WHEN** evaluating the platform's value
-- **THEN** it provides: clean resource retrieval interface for users, simplified publishing workflow for administrators, monetization through premium file hosting revenue
+#### 场景: 核心价值主张
+- **当** 评估平台价值时
+- **那么** 它提供：用户友好的资源检索界面、简化的管理员发布流程、通过高级文件托管服务实现的变现
 
-#### Scenario: Business Model Clarity
-- **WHEN** reviewing the commercial strategy
-- **THEN** revenue is generated through Chengtong/Feimao/Rapidgator download commissions and website advertising
+#### 场景: 商业模式清晰度
+- **当** 审查商业策略时
+- **那么** 收入通过诚通/飞猫/Rapidgator 下载佣金和网站广告产生
 
-### Requirement: Key Functional Modules
-The system SHALL implement three core modules for complete resource processing workflow.
+### 需求: 核心功能模块
+系统应实现三个核心模块以完成完整的资源处理工作流。
 
-#### Scenario: Web Frontend Module
-- **WHEN** users interact with the platform
-- **THEN** they access resource listings, detail pages, search functionality, and category browsing
+#### 场景: Web 前端模块
+- **当** 用户与平台交互时
+- **那么** 他们可以访问资源列表、详情页面、搜索功能和分类浏览
 
-#### Scenario: Web Backend Module
-- **WHEN** administrators manage content
-- **THEN** they use the CMS to manage resource data, users, and permissions
+#### 场景: Web 后端模块
+- **当** 管理员管理内容时
+- **那么** 他们使用 CMS 管理资源数据、用户和权限
 
-#### Scenario: Automation Bot Module
-- **WHEN** processing new resources
-- **THEN** the Auto-Bot performs: Baidu Netdisk download, resource extraction and metadata parsing, LLM-powered content enhancement, multi-host distribution, automated CMS publishing
+#### 场景: 自动化机器人模块
+- **当** 处理新资源时
+- **那么** 自动机器人执行：百度网盘下载、资源解压和元数据解析、LLM 驱动的内容增强、多主机分发、自动化 CMS 发布

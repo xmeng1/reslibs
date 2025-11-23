@@ -1,53 +1,53 @@
-# Technology Stack
+# 技术栈
 
-### Requirement: Frontend Technology Stack
-The system SHALL use modern web technologies for the user interface.
+### 需求: 前端技术栈
+系统应为用户界面使用现代 Web 技术。
 
-#### Scenario: Framework Selection
-- **WHEN** developing the frontend
-- **THEN** the system uses Next.js 14+ with App Router, TypeScript, Tailwind CSS, Shadcn/UI, and Lucide React icons
+#### 场景: 框架选择
+- **当** 开发前端时
+- **那么** 系统使用 Next.js 14+ with App Router、TypeScript、Tailwind CSS、Shadcn/UI 和 Lucide React 图标
 
-#### Scenario: Development Environment
-- **WHEN** setting up the frontend project
-- **THEN** developers have access to TypeScript type checking, hot reloading, and component-based development
+#### 场景: 开发环境
+- **当** 设置前端项目时
+- **那么** 开发者可以使用 TypeScript 类型检查、热重载和基于组件的开发
 
-### Requirement: Backend Technology Stack
-The system SHALL provide a robust API and data management layer.
+### 需求: 后端技术栈
+系统应提供强大的 API 和数据管理层。
 
-#### Scenario: Backend Framework
-- **WHEN** implementing server-side logic
-- **THEN** the system uses Next.js Server Actions for lightweight operations or NestJS for complex business logic
+#### 场景: 后端框架
+- **当** 实现服务器端逻辑时
+- **那么** 系统对轻量级操作使用 Next.js Server Actions，对复杂业务逻辑使用 NestJS
 
-#### Scenario: Database Configuration
-- **WHEN** storing application data
-- **THEN** the system uses PostgreSQL (Supabase/Neon) for production, SQLite for testing, with Prisma ORM for data access
+#### 场景: 数据库配置
+- **当** 存储应用程序数据时
+- **那么** 系统在生产环境使用 PostgreSQL（Supabase/Neon），在测试环境使用 SQLite，使用 Prisma ORM 进行数据访问
 
-#### Scenario: Authentication System
-- **WHEN** managing user access
-- **THEN** the system implements authentication using Clerk or NextAuth
+#### 场景: 身份验证系统
+- **当** 管理用户访问时
+- **那么** 系统使用 Clerk 或 NextAuth 实现身份验证
 
-### Requirement: Automation Bot Technology Stack
-The system SHALL use Python for automation tasks with AI integration.
+### 需求: 自动化机器人技术栈
+系统应使用 Python 进行带有 AI 集成的自动化任务。
 
-#### Scenario: Python Runtime
-- **WHEN** executing automation scripts
-- **THEN** the system runs on Python 3.11+ with appropriate package management
+#### 场景: Python 运行时
+- **当** 执行自动化脚本时
+- **那么** 系统运行在 Python 3.11+ 上，使用适当的包管理
 
-#### Scenario: AI Service Integration
-- **WHEN** generating content automatically
-- **THEN** the system integrates Google Gemini API using the `gemini-1.5-flash` or `gemini-1.5-pro` model with the `google-generativeai` Python SDK
+#### 场景: AI 服务集成
+- **当** 自动生成内容时
+- **那么** 系统集成 Google Gemini API，使用 `gemini-1.5-flash` 或 `gemini-1.5-pro` 模型以及 `google-generativeai` Python SDK
 
-#### Scenario: Cost-Effective AI Usage
-- **WHEN** configuring AI services
-- **THEN** the system uses Gemini's free tier (1500 daily requests) with pay-as-you-go disabled for automated script reliability
+#### 场景: 高性价比 AI 使用
+- **当** 配置 AI 服务时
+- **那么** 系统使用 Gemini 的免费层（每日 1500 次请求），禁用按需付费以确保自动化脚本的可靠性
 
-### Requirement: Deployment Technology Stack
-The system SHALL be deployed using modern cloud infrastructure.
+### 需求: 部署技术栈
+系统应使用现代云基础设施进行部署。
 
-#### Scenario: Web Application Deployment
-- **WHEN** deploying the frontend/backend
-- **THEN** the system uses Vercel for hosting and continuous deployment
+#### 场景: Web 应用程序部署
+- **当** 部署前端/后端时
+- **那么** 系统使用 Vercel 进行托管和持续部署
 
-#### Scenario: Worker Server Deployment
-- **WHEN** running automation scripts
-- **THEN** the system operates on a local high-performance PC or high-bandwidth VPS for large file processing
+#### 场景: 工作服务器部署
+- **当** 运行自动化脚本时
+- **那么** 系统在本地高性能 PC 或高带宽 VPS 上运行，用于处理大文件

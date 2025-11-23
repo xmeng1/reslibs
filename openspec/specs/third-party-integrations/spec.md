@@ -1,64 +1,64 @@
-# Third Party Integrations
+# 第三方集成
 
-### Requirement: Baidu Netdisk Integration
-The system SHALL integrate with Baidu Netdisk for source file access.
+### 需求: 百度网盘集成
+系统应与百度网盘集成以访问源文件。
 
-#### Scenario: Authentication Setup
-- **WHEN** configuring Baidu Netdisk access
-- **THEN** administrators provide `BDUSS` and `STOKEN` in environment variables
+#### 场景: 身份验证设置
+- **当** 配置百度网盘访问时
+- **那么** 管理员在环境变量中提供 `BDUSS` 和 `STOKEN`
 
-#### Scenario: File Operations
-- **WHEN** accessing Baidu Netdisk
-- **THEN** the system uses `BaiduPCS-Go` compiled binary for file listing and downloads
+#### 场景: 文件操作
+- **当** 访问百度网盘时
+- **那么** 系统使用 `BaiduPCS-Go` 编译二进制文件进行文件列表和下载
 
-### Requirement: AI Content Generation Integration
-The system SHALL integrate with AI services for content generation.
+### 需求: AI 内容生成集成
+系统应与 AI 服务集成以生成内容。
 
-#### Scenario: AI Provider Selection
-- **WHEN** configuring AI services
-- **THEN** the system prioritizes Google Gemini Pro 1.5 for high free quotas and long context windows
+#### 场景: AI 提供商选择
+- **当** 配置 AI 服务时
+- **那么** 系统优先选择 Google Gemini Pro 1.5，因其高免费配额和长上下文窗口
 
-#### Scenario: API Configuration
-- **WHEN** setting up AI integration
-- **THEN** the system uses `GEMINI_API_KEY` environment variable for authentication
+#### 场景: API 配置
+- **当** 设置 AI 集成时
+- **那么** 系统使用 `GEMINI_API_KEY` 环境变量进行身份验证
 
-#### Scenario: Content Generation Request
-- **WHEN** generating content
-- **THEN** the system sends file metadata to AI service and receives structured JSON response with title, description, and tags
+#### 场景: 内容生成请求
+- **当** 生成内容时
+- **那么** 系统将文件元数据发送到 AI 服务，并接收包含标题、描述和标签的结构化 JSON 响应
 
-### Requirement: File Hosting Integration
-The system SHALL integrate with multiple monetized file hosting services.
+### 需求: 文件托管集成
+系统应与多个变现文件托管服务集成。
 
-#### Scenario: Rapidgator Integration
-- **WHEN** uploading to Rapidgator
-- **THEN** the system uses FTP upload with configured host, username, and password
+#### 场景: Rapidgator 集成
+- **当** 上传到 Rapidgator 时
+- **那么** 系统使用 FTP 上传，配置主机、用户名和密码
 
-#### Scenario: Chengtong Integration
-- **WHEN** using Chengtong hosting
-- **THEN** the system integrates through developer API or WebDAV interface
+#### 场景: 诚通集成
+- **当** 使用诚通托管时
+- **那么** 系统通过开发者 API 或 WebDAV 接口集成
 
-#### Scenario: Feimaoyun Integration
-- **WHEN** uploading to Feimaoyun
-- **THEN** the system uses provided API interface for file uploads and link generation
+#### 场景: 飞猫云集成
+- **当** 上传到飞猫云时
+- **那么** 系统使用提供的 API 接口进行文件上传和链接生成
 
-### Requirement: Image Hosting Integration
-The system SHALL integrate with object storage for image hosting.
+### 需求: 图像托管集成
+系统应与对象存储集成以托管图像。
 
-#### Scenario: Cloud Storage Selection
-- **WHEN** choosing image hosting
-- **THEN** the system uses Cloudflare R2 for S3-compatible API with no egress fees
+#### 场景: 云存储选择
+- **当** 选择图像托管时
+- **那么** 系统使用 Cloudflare R2 提供的 S3 兼容 API，无出口流量费用
 
-#### Scenario: Image Upload Workflow
-- **WHEN** storing preview images
-- **THEN** the system uploads images to R2 and generates public URLs for website display
+#### 场景: 图像上传工作流
+- **当** 存储预览图像时
+- **那么** 系统将图像上传到 R2 并生成用于网站显示的公共 URL
 
-### Requirement: External Service Configuration
-The system SHALL securely manage external service credentials.
+### 需求: 外部服务配置
+系统应安全地管理外部服务凭据。
 
-#### Scenario: Environment Variable Management
-- **WHEN** configuring external services
-- **THEN** all API keys and credentials are stored in environment variables, not in code
+#### 场景: 环境变量管理
+- **当** 配置外部服务时
+- **那么** 所有 API 密钥和凭据都存储在环境变量中，而不是代码中
 
-#### Scenario: Service Health Monitoring
-- **WHEN** using external APIs
-- **THEN** the system implements retry logic and error handling for service interruptions
+#### 场景: 服务健康监控
+- **当** 使用外部 API 时
+- **那么** 系统为服务中断实现重试逻辑和错误处理

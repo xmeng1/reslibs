@@ -1,64 +1,64 @@
-# UI Design
+# UI 设计
 
-### Requirement: Layout Architecture
-The system SHALL implement a clean, grid-based layout inspired by `koudaizy.com`.
+### 需求: 布局架构
+系统应实现受 `koudaizy.com` 启发的干净、基于网格的布局。
 
-#### Scenario: Header Navigation
-- **WHEN** users view the website header
-- **THEN** they see: left-aligned logo ("Unity ResLibs"), centered prominent search bar with rounded corners, right-aligned category links (Assets, Tutorials, Tools)
+#### 场景: 顶部导航
+- **当** 用户查看网站头部时
+- **那么** 他们看到：左对齐的徽标（"Unity ResLibs"）、居中的醒目圆角搜索栏、右对齐的分类链接（资源、教程、工具）
 
-#### Scenario: Main Content Grid
-- **WHEN** browsing resource listings
-- **THEN** the system displays: 4-column grid on desktop, 2-3 columns on tablet, 1 column on mobile devices
+#### 场景: 主内容网格
+- **当** 浏览资源列表时
+- **那么** 系统显示：桌面上 4 列网格、平板上 2-3 列、移动设备上 1 列
 
-#### Scenario: Resource Card Design
-- **WHEN** displaying individual resources
-- **THEN** each card shows: 16:9 aspect ratio thumbnail with rounded corners, bold title (max 2 lines with ellipsis), metadata information (Unity version, file size, update date) with small icons, hover effects with elevation and shadow
+#### 场景: 资源卡片设计
+- **当** 显示单个资源时
+- **那么** 每个卡片显示：16:9 纵横比的圆角缩略图、粗体标题（最多 2 行带省略号）、带小图标的元数据信息（Unity 版本、文件大小、更新日期）、带高度和阴影的悬停效果
 
-### Requirement: Detail Page Layout
-The system SHALL provide a two-column layout for detailed content views.
+### 需求: 详情页布局
+系统应提供两列布局用于详细内容视图。
 
-#### Scenario: Primary Content Area
-- **WHEN** viewing resource details
-- **THEN** the left column (70% width) displays: large title, hero image, Markdown-rendered description with proper spacing for H2/H3 elements, download section with prominent call-to-action buttons
+#### 场景: 主要内容区域
+- **当** 查看资源详情时
+- **那么** 左列（70% 宽度）显示：大标题、主图、为 H2/H3 元素提供适当间距的 Markdown 渲染描述、带有醒目操作按钮的下载区域
 
-#### Scenario: Sidebar Content
-- **WHEN** viewing the right sidebar (30% width)
-- **THEN** users see: "Latest Resources" section, "Related Posts" recommendations
+#### 场景: 侧边栏内容
+- **当** 查看右侧边栏（30% 宽度）时
+- **那么** 用户看到："最新资源"部分、"相关文章"推荐
 
-#### Scenario: Download Section Design
-- **WHEN** users reach the download area
-- **THEN** they see clearly labeled buttons for each hosting provider (e.g., "Download via Rapidgator", "Download via ChengTong")
+#### 场景: 下载区域设计
+- **当** 用户到达下载区域时
+- **那么** 他们看到为每个托管提供商清晰标记的按钮（例如，"通过 Rapidgator 下载"、"通过诚通下载"）
 
-### Requirement: Visual Design System
-The system SHALL implement a consistent color palette and typography.
+### 需求: 视觉设计系统
+系统应实现一致的调色板和排版。
 
-#### Scenario: Color Scheme
-- **WHEN** applying colors throughout the interface
-- **THEN** the system uses: primary colors in deep blue/purple tones (Unity-inspired), very light gray (#f8f9fa) or white backgrounds, dark gray (#333) for headings, lighter gray (#666) for body text
+#### 场景: 配色方案
+- **当** 在整个界面中应用颜色时
+- **那么** 系统使用：深蓝色/紫色调的主要颜色（受 Unity 启发）、非常浅的灰色（#f8f9fa）或白色背景、标题用深灰色（#333）、正文用浅灰色（#666）
 
-#### Scenario: Typography Hierarchy
-- **WHEN** displaying text content
-- **THEN** the system maintains clear visual hierarchy with appropriate font sizes and weights for different content types
+#### 场景: 排版层次结构
+- **当** 显示文本内容时
+- **那么** 系统为不同内容类型保持清晰的视觉层次，使用适当的字体大小和粗细
 
-### Requirement: Responsive Design
-The system SHALL provide optimal viewing experience across all devices.
+### 需求: 响应式设计
+系统应在所有设备上提供最佳观看体验。
 
-#### Scenario: Mobile Optimization
-- **WHEN** accessing on mobile devices
-- **THEN** the layout adapts to single-column grids with touch-friendly buttons and readable text sizes
+#### 场景: 移动优化
+- **当** 在移动设备上访问时
+- **那么** 布局适应单列网格，带有触友好的按钮和可读的文本大小
 
-#### Scenario: Tablet Experience
-- **WHEN** viewing on tablets
-- **THEN** the system provides intermediate grid layouts with appropriately sized interactive elements
+#### 场景: 平板体验
+- **当** 在平板上查看时
+- **那么** 系统提供中间网格布局，带有适当大小的交互元素
 
-### Requirement: Interactive Elements
-The system SHALL provide engaging user interactions.
+### 需求: 交互元素
+系统应提供引人入胜的用户交互。
 
-#### Scenario: Card Hover Effects
-- **WHEN** users hover over resource cards
-- **THEN** cards animate with subtle elevation increase and shadow enhancement
+#### 场景: 卡片悬停效果
+- **当** 用户悬停在资源卡片上时
+- **那么** 卡片以微妙的高度增加和阴影增强进行动画
 
-#### Scenario: Search Functionality
-- **WHEN** users interact with the search bar
-- **THEN** they experience real-time search suggestions and quick results highlighting
+#### 场景: 搜索功能
+- **当** 用户与搜索栏交互时
+- **那么** 他们体验实时搜索建议和快速结果突出显示

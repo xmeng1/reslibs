@@ -1,75 +1,75 @@
-# Automation Workflow
+# 自动化工作流
 
-### Requirement: Process Unity Asset Task
-The system SHALL provide an automated CLI task `process_unity_asset` that handles single or batch Unity resource processing.
+### 需求: 处理 Unity 资源任务
+系统应提供一个自动化 CLI 任务 `process_unity_asset`，用于处理单个或批量 Unity 资源。
 
-#### Scenario: Task Trigger
-- **WHEN** administrators run the Python CLI
-- **THEN** the automation workflow begins for processing Unity assets
+#### 场景: 任务触发
+- **当** 管理员运行 Python CLI 时
+- **那么** 自动化工作流开始处理 Unity 资源
 
-### Requirement: Resource Acquisition Stage
-The system SHALL download and preprocess resources from Baidu Netdisk.
+### 需求: 资源获取阶段
+系统应从百度网盘下载并预处理资源。
 
-#### Scenario: Input Validation
-- **WHEN** administrators provide Baidu share link and extraction code
-- **THEN** the system validates and processes the input
+#### 场景: 输入验证
+- **当** 管理员提供百度分享链接和提取码时
+- **那么** 系统验证并处理输入
 
-#### Scenario: File Download
-- **WHEN** valid credentials are provided
-- **THEN** the script downloads files to `./temp/download/` directory using BaiduPCS tool
+#### 场景: 文件下载
+- **当** 提供有效凭据时
+- **那么** 脚本使用 BaiduPCS 工具将文件下载到 `./temp/download/` 目录
 
-#### Scenario: Preprocessing
-- **WHEN** compressed files are detected (.zip, .rar, .7z, .unitypackage)
-- **THEN** the system extracts file lists, preview images, and identifies keywords from filenames
+#### 场景: 预处理
+- **当** 检测到压缩文件时（.zip, .rar, .7z, .unitypackage）
+- **那么** 系统提取文件列表、预览图像，并从文件名中识别关键词
 
-### Requirement: AI Content Generation
-The system SHALL generate SEO-friendly content using LLM APIs.
+### 需求: AI 内容生成
+系统应使用 LLM API 生成 SEO 友好的内容。
 
-#### Scenario: Content Input Processing
-- **WHEN** file metadata is extracted
-- **THEN** the system sends filename, readme content, and directory structure to LLM API
+#### 场景: 内容输入处理
+- **当** 提取文件元数据时
+- **那么** 系统将文件名、readme 内容和目录结构发送到 LLM API
 
-#### Scenario: SEO Content Output
-- **WHEN** LLM processing completes
-- **THEN** the system receives JSON containing: SEO-optimized title (English + Chinese), 300-word detailed description (Markdown), 3-5 relevant tags
+#### 场景: SEO 内容输出
+- **当** LLM 处理完成时
+- **那么** 系统接收包含以下内容的 JSON：SEO 优化的标题（英文+中文）、300字详细描述（Markdown）、3-5个相关标签
 
-### Requirement: Multi-Host Distribution
-The system SHALL distribute processed resources to multiple file hosting services.
+### 需求: 多主机分发
+系统应将处理后的资源分发到多个文件托管服务。
 
-#### Scenario: Repackaging
-- **WHEN** resources need branding
-- **THEN** the system optionally adds promotional text `READ_ME_RESLIBS.txt` before recompression
+#### 场景: 重新打包
+- **当** 资源需要品牌标识时
+- **那么** 系统可选择在重新压缩前添加宣传文本 `READ_ME_RESLIBS.txt`
 
-#### Scenario: Multi-Channel Upload
-- **WHEN** distribution begins
-- **THEN** the system uploads to domestic channels (Chengtong/Feimaoyun) and international channels (Rapidgator/Turbobit)
+#### 场景: 多渠道上传
+- **当** 分发开始时
+- **那么** 系统上传到国内渠道（诚通/飞猫云）和国际渠道（Rapidgator/Turbobit）
 
-#### Scenario: Link Aggregation
-- **WHEN** uploads complete successfully
-- **THEN** the system collects public download URLs and optionally generates short links
+#### 场景: 链接聚合
+- **当** 上传成功完成时
+- **那么** 系统收集公共下载 URL 并可选择生成短链接
 
-### Requirement: Website Publishing
-The system SHALL automatically publish processed content to the CMS.
+### 需求: 网站发布
+系统应自动将处理后的内容发布到 CMS。
 
-#### Scenario: Image Processing
-- **WHEN** preview images are extracted
-- **THEN** the system uploads them to object storage (R2/AWS S3) and obtains URLs
+#### 场景: 图像处理
+- **当** 提取预览图像时
+- **那么** 系统将它们上传到对象存储（R2/AWS S3）并获取 URL
 
-#### Scenario: Database Entry
-- **WHEN** all metadata is ready
-- **THEN** the system creates a new Post entry with: AI-generated title, AI-generated description with preview images, monetized download links, draft or published status
+#### 场景: 数据库条目
+- **当** 所有元数据准备就绪时
+- **那么** 系统创建新的 Post 条目，包含：AI 生成的标题、带预览图像的 AI 生成描述、变现下载链接、草稿或已发布状态
 
-#### Scenario: Cleanup
-- **WHEN** publishing completes
-- **THEN** the system removes temporary local files
+#### 场景: 清理
+- **当** 发布完成时
+- **那么** 系统删除临时本地文件
 
-### Requirement: Error Handling
-The system SHALL handle failures gracefully with appropriate retry mechanisms.
+### 需求: 错误处理
+系统应通过适当的重试机制优雅地处理故障。
 
-#### Scenario: Download Failure Recovery
-- **WHEN** Baidu Netdisk download fails (CAPTCHA/rate limiting)
-- **THEN** the system implements retry logic or sends alerts
+#### 场景: 下载失败恢复
+- **当** 百度网盘下载失败时（验证码/限速）
+- **那么** 系统实现重试逻辑或发送警报
 
-#### Scenario: Corruption Detection
-- **WHEN** file extraction fails
-- **THEN** the system marks the resource as corrupted and notifies administrators
+#### 场景: 损坏检测
+- **当** 文件解压失败时
+- **那么** 系统将资源标记为已损坏并通知管理员
