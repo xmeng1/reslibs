@@ -88,4 +88,20 @@ ci/*.pub
 .Trashes
 ehthumbs.db
 Thumbs.db
-/generated/prisma
+
+# Node.js
+node_modules/
+.next/
+/.next/
+/prisma/dev.db*
+/.env
+
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
