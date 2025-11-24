@@ -1,0 +1,96 @@
+import Link from 'next/link'
+import { Github, Twitter, Mail } from 'lucide-react'
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo and Description */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">R</span>
+              </div>
+              <span className="text-xl font-bold">ResLibs</span>
+            </div>
+            <p className="text-gray-300 mb-4 max-w-md">
+              通用资源分享平台，支持 Unity Assets、软件工具、设计素材等多种资源类型。
+              为开发者提供高质量的资源下载和管理服务。
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">快速链接</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/resources" className="text-gray-300 hover:text-white transition-colors">
+                  资源库
+                </Link>
+              </li>
+              <li>
+                <Link href="/categories" className="text-gray-300 hover:text-white transition-colors">
+                  分类浏览
+                </Link>
+              </li>
+              <li>
+                <Link href="/upload" className="text-gray-300 hover:text-white transition-colors">
+                  上传资源
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin" className="text-gray-300 hover:text-white transition-colors">
+                  管理后台
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">支持</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/help" className="text-gray-300 hover:text-white transition-colors">
+                  帮助中心
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                  隐私政策
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                  使用条款
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  联系我们
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 ResLibs. 保留所有权利。</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Search, Filter, Download, Eye } from 'lucide-react'
 import { RESOURCE_TYPES } from '@/types/resource'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 
 // 模拟数据 - 后续将替换为真实的数据库查询
 const mockResources = [
@@ -55,6 +57,7 @@ const mockResources = [
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navbar />
       {/* 页面头部 */}
       <div className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-6">
@@ -218,6 +221,7 @@ export default function ResourcesPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

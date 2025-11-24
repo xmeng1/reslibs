@@ -1,0 +1,192 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "R ResLibs" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: R
+          - generic [ref=e9]: ResLibs
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "资源库" [ref=e12] [cursor=pointer]:
+              - /url: /resources
+            - link "分类" [ref=e13] [cursor=pointer]:
+              - /url: /categories
+            - link "关于" [ref=e14] [cursor=pointer]:
+              - /url: /about
+          - generic [ref=e15]:
+            - img [ref=e16]
+            - textbox "搜索资源..." [ref=e19]
+          - link "管理后台" [ref=e20] [cursor=pointer]:
+            - /url: /admin
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "资源库" [level=1] [ref=e25]
+        - paragraph [ref=e26]: 发现和下载优质的各类资源
+      - link "返回首页" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - button "返回首页" [ref=e28]
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - img [ref=e33]
+            - textbox "搜索资源..." [ref=e36]
+          - generic [ref=e37]:
+            - img [ref=e38]
+            - combobox [ref=e40]:
+              - option "所有类型" [selected]
+              - option "🎮 Unity Assets"
+              - option "⚙️ 软件工具"
+              - option "🎨 设计素材"
+              - option "📹 视频课程"
+          - combobox [ref=e41]:
+            - option "最新发布" [selected]
+            - option "最多下载"
+            - option "最多浏览"
+            - option "按名称"
+        - generic [ref=e42]:
+          - generic [ref=e43] [cursor=pointer]: 全部
+          - generic [ref=e44] [cursor=pointer]: Unity Assets
+          - generic [ref=e45] [cursor=pointer]: 软件工具
+          - generic [ref=e46] [cursor=pointer]: 设计素材
+          - generic [ref=e47] [cursor=pointer]: 视频课程
+      - generic [ref=e48]:
+        - generic [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - generic [ref=e52]: 🎮 Unity Assets
+              - generic [ref=e53]: 游戏资源
+            - link "Low Poly Shooter Pack" [ref=e55]:
+              - /url: /resources/1
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: 高质量的低多边形射击游戏资源包，包含角色、武器、环境等模型
+            - generic [ref=e58]:
+              - generic [ref=e59]: 3D模型
+              - generic [ref=e60]: 射击游戏
+              - generic [ref=e61]: Low Poly
+            - generic [ref=e62]:
+              - generic [ref=e63]: 125 MB
+              - generic [ref=e64]: v3.0
+            - generic [ref=e65]:
+              - generic [ref=e66]:
+                - img [ref=e67]
+                - generic [ref=e70]: 1,234
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - generic [ref=e75]: 5,678
+            - generic [ref=e76]:
+              - button "查看详情" [ref=e77]
+              - button "下载" [ref=e78]
+        - generic [ref=e79] [cursor=pointer]:
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: ⚙️ 软件工具
+              - generic [ref=e83]: 设计软件
+            - link "Blender 3D 建模工具" [ref=e85]:
+              - /url: /resources/2
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: 开源的3D建模和动画软件，功能强大且免费使用
+            - generic [ref=e88]:
+              - generic [ref=e89]: 3D建模
+              - generic [ref=e90]: 动画
+              - generic [ref=e91]: 开源软件
+            - generic [ref=e92]:
+              - generic [ref=e93]: 280 MB
+              - generic [ref=e94]: v4.2.1
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - generic [ref=e100]: 8,901
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - generic [ref=e105]: 12,456
+            - generic [ref=e106]:
+              - button "查看详情" [ref=e107]
+              - button "下载" [ref=e108]
+        - generic [ref=e109] [cursor=pointer]:
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]: 🎨 设计素材
+              - generic [ref=e113]: UI设计
+            - link "UI设计系统组件库" [ref=e115]:
+              - /url: /resources/3
+          - generic [ref=e116]:
+            - paragraph [ref=e117]: 现代化的UI设计组件和模板，包含图标、按钮、表单等元素
+            - generic [ref=e118]:
+              - generic [ref=e119]: UI组件
+              - generic [ref=e120]: 图标
+              - generic [ref=e121]: 设计系统
+            - generic [ref=e122]:
+              - generic [ref=e123]: 45 MB
+              - generic [ref=e124]: v2.5
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - img [ref=e127]
+                - generic [ref=e130]: 3,456
+              - generic [ref=e131]:
+                - img [ref=e132]
+                - generic [ref=e135]: 7,890
+            - generic [ref=e136]:
+              - button "查看详情" [ref=e137]
+              - button "下载" [ref=e138]
+      - generic [ref=e140]:
+        - button "上一页" [disabled]
+        - button "1" [ref=e141] [cursor=pointer]
+        - button "2" [ref=e142] [cursor=pointer]
+        - button "3" [ref=e143] [cursor=pointer]
+        - button "下一页" [ref=e144] [cursor=pointer]
+    - contentinfo [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e151]: R
+              - generic [ref=e152]: ResLibs
+            - paragraph [ref=e153]: 通用资源分享平台，支持 Unity Assets、软件工具、设计素材等多种资源类型。 为开发者提供高质量的资源下载和管理服务。
+            - generic [ref=e154]:
+              - link [ref=e155] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e156]
+              - link [ref=e159] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e160]
+              - link [ref=e162] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e163]
+          - generic [ref=e166]:
+            - heading "快速链接" [level=3] [ref=e167]
+            - list [ref=e168]:
+              - listitem [ref=e169]:
+                - link "资源库" [ref=e170] [cursor=pointer]:
+                  - /url: /resources
+              - listitem [ref=e171]:
+                - link "分类浏览" [ref=e172] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e173]:
+                - link "上传资源" [ref=e174] [cursor=pointer]:
+                  - /url: /upload
+              - listitem [ref=e175]:
+                - link "管理后台" [ref=e176] [cursor=pointer]:
+                  - /url: /admin
+          - generic [ref=e177]:
+            - heading "支持" [level=3] [ref=e178]
+            - list [ref=e179]:
+              - listitem [ref=e180]:
+                - link "帮助中心" [ref=e181] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e182]:
+                - link "隐私政策" [ref=e183] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e184]:
+                - link "使用条款" [ref=e185] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e186]:
+                - link "联系我们" [ref=e187] [cursor=pointer]:
+                  - /url: /contact
+        - paragraph [ref=e189]: © 2025 ResLibs. 保留所有权利。
+  - alert [ref=e190]
+```
