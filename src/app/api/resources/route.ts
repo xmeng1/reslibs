@@ -26,15 +26,17 @@ export async function GET(request: NextRequest) {
     if (tag) {
       where.tags = {
         some: {
-          name: tag
+          tag: {
+            name: tag
+          }
         }
       }
     }
     if (search) {
       where.OR = [
-        { title: { contains: search, mode: 'insensitive' } },
-        { description: { contains: search, mode: 'insensitive' } },
-        { keywords: { contains: search, mode: 'insensitive' } }
+        { title: { contains: search } },
+        { description: { contains: search } },
+        { keywords: { contains: search } }
       ]
     }
 

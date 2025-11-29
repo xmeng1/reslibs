@@ -90,8 +90,8 @@ export async function GET(request: NextRequest) {
     if (categoryId) where.categoryId = categoryId
     if (search) {
       where.OR = [
-        { title: { contains: search, mode: 'insensitive' } },
-        { description: { contains: search, mode: 'insensitive' } }
+        { title: { contains: search } },
+        { description: { contains: search } }
       ]
     }
 
