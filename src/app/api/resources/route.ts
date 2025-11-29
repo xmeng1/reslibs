@@ -82,13 +82,19 @@ export async function GET(request: NextRequest) {
             }
           },
           tags: {
-            select: {
-              id: true,
-              name: true,
-              color: true
+            include: {
+              tag: {
+                select: {
+                  id: true,
+                  name: true,
+                  color: true
+                }
+              }
             },
             orderBy: {
-              weight: 'desc'
+              tag: {
+                weight: 'desc'
+              }
             }
           },
           downloadLinks: {

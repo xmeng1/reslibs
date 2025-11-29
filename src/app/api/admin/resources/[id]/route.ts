@@ -79,7 +79,17 @@ export async function GET(
       include: {
         type: true,
         category: true,
-        tags: true,
+        tags: {
+          include: {
+            tag: {
+              select: {
+                id: true,
+                name: true,
+                color: true
+              }
+            }
+          }
+        },
         downloadLinks: {
           orderBy: { createdAt: 'asc' }
         }
@@ -188,7 +198,17 @@ export async function PUT(
       include: {
         type: true,
         category: true,
-        tags: true,
+        tags: {
+          include: {
+            tag: {
+              select: {
+                id: true,
+                name: true,
+                color: true
+              }
+            }
+          }
+        },
         downloadLinks: true
       }
     })

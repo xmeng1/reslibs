@@ -106,10 +106,19 @@ export async function GET(request: NextRequest) {
           type: true,
           category: true,
           tags: {
-            select: {
-              id: true,
-              name: true,
-              color: true
+            include: {
+              tag: {
+                select: {
+                  id: true,
+                  name: true,
+                  color: true
+                }
+              }
+            },
+            orderBy: {
+              tag: {
+                weight: 'desc'
+              }
             }
           },
           downloadLinks: {
@@ -207,7 +216,22 @@ export async function POST(request: NextRequest) {
       include: {
         type: true,
         category: true,
-        tags: true,
+        tags: {
+          include: {
+            tag: {
+              select: {
+                id: true,
+                name: true,
+                color: true
+              }
+            }
+          },
+          orderBy: {
+            tag: {
+              weight: 'desc'
+            }
+          }
+        },
         downloadLinks: true
       }
     })
