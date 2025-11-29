@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
         data: {
           userId: decoded.userId,
           action: 'logout',
-          details: { logoutTime: new Date().toISOString() },
+          details: JSON.stringify({ logoutTime: new Date().toISOString() }),
           ipAddress: request.ip || 'unknown',
           userAgent: request.headers.get('user-agent') || 'unknown'
         }

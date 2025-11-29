@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
       data: {
         userId: user.id,
         action: 'login',
-        details: { loginTime: new Date().toISOString() },
+        details: JSON.stringify({ loginTime: new Date().toISOString() }),
         ipAddress: request.ip || 'unknown',
         userAgent: request.headers.get('user-agent') || 'unknown'
       }

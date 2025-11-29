@@ -200,11 +200,11 @@ export async function PUT(
         action: 'update',
         resource: 'resource',
         resourceId: resource.id,
-        details: {
+        details: JSON.stringify({
           resourceTitle: resource.title,
           resourceSlug: resource.slug,
           updatedFields: Object.keys(validatedData)
-        },
+        }),
         ipAddress: request.ip || 'unknown',
         userAgent: request.headers.get('user-agent') || 'unknown'
       }
@@ -279,10 +279,10 @@ export async function DELETE(
         action: 'delete',
         resource: 'resource',
         resourceId: existingResource.id,
-        details: {
+        details: JSON.stringify({
           resourceTitle: existingResource.title,
           resourceSlug: existingResource.slug
-        },
+        }),
         ipAddress: request.ip || 'unknown',
         userAgent: request.headers.get('user-agent') || 'unknown'
       }

@@ -192,8 +192,8 @@ export async function POST(request: NextRequest) {
         publishedAt: validatedData.status === 'published' ? new Date() : undefined,
         typeId: validatedData.typeId,
         categoryId: validatedData.categoryId,
-        metadata: validatedData.metadata || {},
-        previews: validatedData.previews || [],
+        metadata: JSON.stringify(validatedData.metadata || {}),
+        previews: JSON.stringify(validatedData.previews || []),
         metaTitle: validatedData.metaTitle,
         metaDescription: validatedData.metaDescription,
         keywords: validatedData.keywords,
@@ -219,10 +219,10 @@ export async function POST(request: NextRequest) {
         action: 'create',
         resource: 'resource',
         resourceId: resource.id,
-        details: {
+        details: JSON.stringify({
           resourceTitle: resource.title,
           resourceSlug: resource.slug
-        },
+        }),
         ipAddress: request.ip || 'unknown',
         userAgent: request.headers.get('user-agent') || 'unknown'
       }
