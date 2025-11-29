@@ -73,12 +73,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button asChild size="lg" className="px-8 py-3">
                   <Link href="/resources">浏览资源</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="px-8 py-3">
-                  <Link href="/upload">上传资源</Link>
                 </Button>
               </div>
             </div>
@@ -224,61 +221,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Resource Types Grid */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                支持的资源类型
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                涵盖开发者和设计师常用的各类资源
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {RESOURCE_TYPES.map((type) => (
-                <Card key={type.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer">
-                  <CardHeader>
-                    <div className="text-4xl mb-2">{type.icon}</div>
-                    <CardTitle className="text-lg">{type.displayName}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-600 mb-4">
-                      {type.description}
-                    </p>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href={`/resources?type=${type.id}`}>
-                        浏览资源
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              开始使用 ResLibs
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              加入我们的社区，获取最新的优质资源和技术分享
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/resources">立即开始</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600" asChild>
-                <Link href="/upload">上传资源</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-      </main>
+        </main>
 
       <Footer />
     </div>

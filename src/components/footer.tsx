@@ -45,12 +45,7 @@ export default function Footer() {
                   分类浏览
                 </Link>
               </li>
-              <li>
-                <Link href="/upload" className="text-gray-300 hover:text-white transition-colors">
-                  上传资源
-                </Link>
-              </li>
-              <li>
+                <li>
                 <Link href="/admin" className="text-gray-300 hover:text-white transition-colors">
                   管理后台
                 </Link>
