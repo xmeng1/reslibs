@@ -295,6 +295,22 @@ export default function ResourcesPage() {
                   )}
                 </div>
 
+                {/* 元数据信息 */}
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+                  {resource.fileSize && (
+                    <div className="flex items-center gap-1">
+                      <span className="text-xs">📦</span>
+                      <span>{resource.fileSize}</span>
+                    </div>
+                  )}
+                  {resource.version && (
+                    <div className="flex items-center gap-1">
+                      <span className="text-xs">🏷️</span>
+                      <span>{resource.version}</span>
+                    </div>
+                  )}
+                </div>
+
                 {/* 统计信息 */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-1">

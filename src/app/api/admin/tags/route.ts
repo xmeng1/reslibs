@@ -56,7 +56,7 @@ export async function GET(request: NextRequest) {
       include: {
         _count: {
           select: {
-            resources: true
+            resourcesTags: true
           }
         }
       }

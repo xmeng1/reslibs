@@ -55,7 +55,7 @@ export default function AdminLoginPage() {
         {/* 登录表单 */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-center">管理员登录</CardTitle>
+            <h3 className="font-semibold leading-none tracking-tight text-center">管理员登录</h3>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
