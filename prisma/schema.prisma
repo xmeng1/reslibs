@@ -7,6 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 // 资源类型实体
@@ -94,6 +95,66 @@ model DownloadLink {
   // 时间戳
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// 管理员用户实体
+model AdminUser {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  email     String   @unique
+  password  String   // 哈希密码
+  name      String?  // 真实姓名
+  avatar    String?  // 头像URL
+  role      String   @default("admin") // admin, super_admin
+  isActive  Boolean  @default(true)
+
+  // 认证信息
+  lastLoginAt DateTime?
+  loginCount  Int      @default(0)
+
+  // 会话信息
+  sessions AdminSession[]
+
+  // 操作日志
+  activityLogs ActivityLog[]
+
+  // 时间戳
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 管理员会话实体
+model AdminSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+
+  // 关系
+  user AdminUser @relation(fields: [userId], references: [id])
+
+  // 时间戳
+  createdAt DateTime @default(now())
+}
+
+// 活动日志实体
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String
+  action    String   // create, update, delete, login, logout, etc.
+  resource  String?  // resource, category, tag, etc.
+  resourceId String? // 相关资源的ID
+  details   Json?    // 操作详情
+  ipAddress String?
+  userAgent String?
+
+  // 关系
+  user AdminUser @relation(fields: [userId], references: [id])
+
+  // 时间戳
+  createdAt DateTime @default(now())
 }
 
 // 通用资源实体
