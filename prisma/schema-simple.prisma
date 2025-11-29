@@ -68,7 +68,7 @@ model Tag {
   weight Float @default(0)
 
   // 关系
-  resourcesTags ResourceTag[]
+  resources Resource[]
 
   // 时间戳
   createdAt DateTime @default(now())
