@@ -490,9 +490,15 @@ async function main() {
     // 提取关系数据
     const { tagIds, downloadLinks, ...resourceFields } = resourceData
 
+    // 确保slug唯一性（添加时间戳）
+    const uniqueSlug = `${resourceFields.slug}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+
     // 创建资源
     const resource = await prisma.resource.create({
-      data: resourceFields
+      data: {
+        ...resourceFields,
+        slug: uniqueSlug
+      }
     })
 
     createdResources.push(resource)

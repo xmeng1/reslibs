@@ -1,0 +1,383 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "R ResLibs" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: R
+          - generic [ref=e9]: ResLibs
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "资源库" [ref=e12] [cursor=pointer]:
+              - /url: /resources
+            - link "分类" [ref=e13] [cursor=pointer]:
+              - /url: /categories
+            - link "关于" [ref=e14] [cursor=pointer]:
+              - /url: /about
+          - generic [ref=e15]:
+            - img [ref=e16]
+            - textbox "搜索资源..." [ref=e19]
+          - link "管理后台" [ref=e20] [cursor=pointer]:
+            - /url: /admin
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "资源库" [level=1] [ref=e25]
+        - paragraph [ref=e26]: 发现和下载优质的各类资源
+      - link "返回首页" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - button "返回首页" [ref=e28]
+    - generic [ref=e29]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - textbox "搜索资源..." [ref=e36]
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - combobox [ref=e40]:
+            - option "所有类型" [selected]
+            - option "🎮 Unity Assets"
+            - option "⚙️ 软件工具"
+            - option "🎨 设计素材"
+            - option "📹 视频课程"
+            - option "🎵 音频音乐"
+            - option "📚 文档资料"
+        - combobox [ref=e41]:
+          - option "最新发布" [selected]
+          - option "最多下载"
+          - option "最多浏览"
+          - option "按名称"
+        - button "搜索" [ref=e42] [cursor=pointer]
+      - generic [ref=e43]:
+        - generic [ref=e44] [cursor=pointer]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: 🎮 Unity Assets
+              - generic [ref=e48]: 🎮 游戏开发
+            - link "Low Poly Shooter Pack" [ref=e50]:
+              - /url: /resources/cmikn5s51000ppjkxm8s84ix6
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: 高质量的低多边形射击游戏资源包，包含角色、武器、环境、特效等完整游戏开发素材。适合制作各种射击类游戏。
+            - generic [ref=e53]:
+              - generic [ref=e54]: 优质
+              - generic [ref=e55]: 免费
+              - generic [ref=e56]: 新手友好
+              - generic [ref=e57]: "+1"
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - img [ref=e60]
+                - generic [ref=e63]: 2,847
+              - generic [ref=e64]:
+                - img [ref=e65]
+                - generic [ref=e68]: 15,445
+            - generic [ref=e69]:
+              - button "查看详情" [ref=e70]
+              - generic [ref=e71]: 下载
+        - generic [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]: ⚙️ 软件工具
+              - generic [ref=e76]: ⚙️ 开发工具
+            - link "Blender 3D 建模软件" [ref=e78]:
+              - /url: /resources/cmikn5s680011pjkxr19h81re
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: 开源的跨平台3D建模、动画、渲染软件。功能强大，支持建模、雕刻、动画、渲染、视频编辑和合成。
+            - generic [ref=e81]:
+              - generic [ref=e82]: 热门
+              - generic [ref=e83]: 免费
+              - generic [ref=e84]: 开源
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - img [ref=e87]
+                - generic [ref=e90]: 15,234
+              - generic [ref=e91]:
+                - img [ref=e92]
+                - generic [ref=e95]: 45,699
+            - generic [ref=e96]:
+              - button "查看详情" [ref=e97]
+              - generic [ref=e98]: 下载
+        - generic [ref=e99] [cursor=pointer]:
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: 🎨 设计素材
+              - generic [ref=e103]: 🎨 设计创意
+            - link "Modern UI Design System" [ref=e105]:
+              - /url: /resources/cmikn5s6m001bpjkxqzcqpmu0
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: 现代化的UI设计系统和组件库，包含完整的设计规范、组件库、图标集和模板。支持Web、移动端和桌面应用。
+            - generic [ref=e108]:
+              - generic [ref=e109]: 完整项目
+              - generic [ref=e110]: 优质
+              - generic [ref=e111]: 专业版
+              - generic [ref=e112]: "+1"
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - img [ref=e115]
+                - generic [ref=e118]: 8,765
+              - generic [ref=e119]:
+                - img [ref=e120]
+                - generic [ref=e123]: 23,477
+            - generic [ref=e124]:
+              - button "查看详情" [ref=e125]
+              - generic [ref=e126]: 下载
+        - generic [ref=e127] [cursor=pointer]:
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: 📹 视频课程
+              - generic [ref=e131]: 🎮 游戏开发
+            - link "Unity游戏开发完整教程" [ref=e133]:
+              - /url: /resources/cmikn5s7a001npjkx1i8jh92i
+          - generic [ref=e134]:
+            - paragraph [ref=e135]: 从零开始学习Unity游戏开发的完整视频教程，涵盖C#编程、Unity界面、2D/3D游戏开发、发布上线等全流程。
+            - generic [ref=e136]:
+              - generic [ref=e137]: 优质
+              - generic [ref=e138]: 教程
+              - generic [ref=e139]: 新手友好
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - img [ref=e142]
+                - generic [ref=e145]: 6,543
+              - generic [ref=e146]:
+                - img [ref=e147]
+                - generic [ref=e150]: 32,129
+            - generic [ref=e151]:
+              - button "查看详情" [ref=e152]
+              - generic [ref=e153]: 下载
+        - generic [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: 🎵 音频音乐
+              - generic [ref=e158]: 🎮 游戏开发
+            - link "RPG游戏背景音乐集" [ref=e160]:
+              - /url: /resources/cmikn5s7o001xpjkx5xvanzxa
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: 专为RPG游戏设计的背景音乐集，包含战斗、城镇、地下城、森林等不同场景的高品质音乐文件。
+            - generic [ref=e163]:
+              - generic [ref=e164]: 热门
+              - generic [ref=e165]: 优质
+              - generic [ref=e166]: 素材包
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - img [ref=e169]
+                - generic [ref=e172]: 4,321
+              - generic [ref=e173]:
+                - img [ref=e174]
+                - generic [ref=e177]: 12,781
+            - generic [ref=e178]:
+              - button "查看详情" [ref=e179]
+              - generic [ref=e180]: 下载
+        - generic [ref=e181] [cursor=pointer]:
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: 📚 文档资料
+              - generic [ref=e185]: 🌐 Web开发
+            - link "React 开发完整指南" [ref=e187]:
+              - /url: /resources/cmikn5s8f0027pjkxymu2crf9
+          - generic [ref=e188]:
+            - paragraph [ref=e189]: React前端开发的完整学习指南，包含基础语法、Hooks、状态管理、路由、性能优化等核心内容，附带实战项目。
+            - generic [ref=e190]:
+              - generic [ref=e191]: 优质
+              - generic [ref=e192]: 教程
+              - generic [ref=e193]: 新手友好
+              - generic [ref=e194]: "+1"
+            - generic [ref=e195]:
+              - generic [ref=e196]:
+                - img [ref=e197]
+                - generic [ref=e200]: 9,876
+              - generic [ref=e201]:
+                - img [ref=e202]
+                - generic [ref=e205]: 56,448
+            - generic [ref=e206]:
+              - button "查看详情" [ref=e207]
+              - generic [ref=e208]: 下载
+        - generic [ref=e209] [cursor=pointer]:
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]: 🎮 Unity Assets
+              - generic [ref=e213]: 🎮 游戏开发
+            - link "Low Poly Shooter Pack" [ref=e215]:
+              - /url: /resources/cmikl1aia000pspraa395mir7
+          - generic [ref=e216]:
+            - paragraph [ref=e217]: 高质量的低多边形射击游戏资源包，包含角色、武器、环境、特效等完整游戏开发素材。适合制作各种射击类游戏。
+            - generic [ref=e218]:
+              - generic [ref=e219]: 优质
+              - generic [ref=e220]: 免费
+              - generic [ref=e221]: 新手友好
+              - generic [ref=e222]: "+1"
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - img [ref=e225]
+                - generic [ref=e228]: 2,847
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - generic [ref=e233]: 15,468
+            - generic [ref=e234]:
+              - button "查看详情" [ref=e235]
+              - generic [ref=e236]: 下载
+        - generic [ref=e237] [cursor=pointer]:
+          - generic [ref=e238]:
+            - generic [ref=e239]:
+              - generic [ref=e240]: ⚙️ 软件工具
+              - generic [ref=e241]: ⚙️ 开发工具
+            - link "Blender 3D 建模软件" [ref=e243]:
+              - /url: /resources/cmikl1aj80011sprafwu5yqxf
+          - generic [ref=e244]:
+            - paragraph [ref=e245]: 开源的跨平台3D建模、动画、渲染软件。功能强大，支持建模、雕刻、动画、渲染、视频编辑和合成。
+            - generic [ref=e246]:
+              - generic [ref=e247]: 热门
+              - generic [ref=e248]: 免费
+              - generic [ref=e249]: 开源
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - img [ref=e252]
+                - generic [ref=e255]: 15,234
+              - generic [ref=e256]:
+                - img [ref=e257]
+                - generic [ref=e260]: 45,716
+            - generic [ref=e261]:
+              - button "查看详情" [ref=e262]
+              - generic [ref=e263]: 下载
+        - generic [ref=e264] [cursor=pointer]:
+          - generic [ref=e265]:
+            - generic [ref=e266]:
+              - generic [ref=e267]: 🎨 设计素材
+              - generic [ref=e268]: 🎨 设计创意
+            - link "Modern UI Design System" [ref=e270]:
+              - /url: /resources/cmikl1ajl001bspraege1w0tb
+          - generic [ref=e271]:
+            - paragraph [ref=e272]: 现代化的UI设计系统和组件库，包含完整的设计规范、组件库、图标集和模板。支持Web、移动端和桌面应用。
+            - generic [ref=e273]:
+              - generic [ref=e274]: 完整项目
+              - generic [ref=e275]: 优质
+              - generic [ref=e276]: 专业版
+              - generic [ref=e277]: "+1"
+            - generic [ref=e278]:
+              - generic [ref=e279]:
+                - img [ref=e280]
+                - generic [ref=e283]: 8,765
+              - generic [ref=e284]:
+                - img [ref=e285]
+                - generic [ref=e288]: 23,494
+            - generic [ref=e289]:
+              - button "查看详情" [ref=e290]
+              - generic [ref=e291]: 下载
+        - generic [ref=e292] [cursor=pointer]:
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - generic [ref=e295]: 📹 视频课程
+              - generic [ref=e296]: 🎮 游戏开发
+            - link "Unity游戏开发完整教程" [ref=e298]:
+              - /url: /resources/cmikl1ak1001nsprahxxx2m4l
+          - generic [ref=e299]:
+            - paragraph [ref=e300]: 从零开始学习Unity游戏开发的完整视频教程，涵盖C#编程、Unity界面、2D/3D游戏开发、发布上线等全流程。
+            - generic [ref=e301]:
+              - generic [ref=e302]: 优质
+              - generic [ref=e303]: 教程
+              - generic [ref=e304]: 新手友好
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - img [ref=e307]
+                - generic [ref=e310]: 6,543
+              - generic [ref=e311]:
+                - img [ref=e312]
+                - generic [ref=e315]: 32,150
+            - generic [ref=e316]:
+              - button "查看详情" [ref=e317]
+              - generic [ref=e318]: 下载
+        - generic [ref=e319] [cursor=pointer]:
+          - generic [ref=e320]:
+            - generic [ref=e321]:
+              - generic [ref=e322]: 🎵 音频音乐
+              - generic [ref=e323]: 🎮 游戏开发
+            - link "RPG游戏背景音乐集" [ref=e325]:
+              - /url: /resources/cmikl1akn001xspravwq7yyjz
+          - generic [ref=e326]:
+            - paragraph [ref=e327]: 专为RPG游戏设计的背景音乐集，包含战斗、城镇、地下城、森林等不同场景的高品质音乐文件。
+            - generic [ref=e328]:
+              - generic [ref=e329]: 热门
+              - generic [ref=e330]: 优质
+              - generic [ref=e331]: 素材包
+            - generic [ref=e332]:
+              - generic [ref=e333]:
+                - img [ref=e334]
+                - generic [ref=e337]: 4,321
+              - generic [ref=e338]:
+                - img [ref=e339]
+                - generic [ref=e342]: 12,796
+            - generic [ref=e343]:
+              - button "查看详情" [ref=e344]
+              - generic [ref=e345]: 下载
+        - generic [ref=e346] [cursor=pointer]:
+          - generic [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]: 📚 文档资料
+              - generic [ref=e350]: 🌐 Web开发
+            - link "已更新的资源标题" [ref=e352]:
+              - /url: /resources/cmikl1al50027sprajlsuw1wf
+          - generic [ref=e353]:
+            - paragraph [ref=e354]: 这是更新后的描述
+            - generic [ref=e355]:
+              - generic [ref=e356]: 优质
+              - generic [ref=e357]: 教程
+              - generic [ref=e358]: 新手友好
+              - generic [ref=e359]: "+1"
+            - generic [ref=e360]:
+              - generic [ref=e361]:
+                - img [ref=e362]
+                - generic [ref=e365]: 9,876
+              - generic [ref=e366]:
+                - img [ref=e367]
+                - generic [ref=e370]: 56,463
+            - generic [ref=e371]:
+              - button "查看详情" [ref=e372]
+              - generic [ref=e373]: 下载
+    - contentinfo [ref=e374]:
+      - generic [ref=e375]:
+        - generic [ref=e376]:
+          - generic [ref=e377]:
+            - generic [ref=e378]:
+              - generic [ref=e380]: R
+              - generic [ref=e381]: ResLibs
+            - paragraph [ref=e382]: 通用资源分享平台，支持 Unity Assets、软件工具、设计素材等多种资源类型。 为开发者提供高质量的资源下载和管理服务。
+            - generic [ref=e383]:
+              - link [ref=e384] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e385]
+              - link [ref=e388] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e389]
+              - link [ref=e391] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e392]
+          - generic [ref=e395]:
+            - heading "快速链接" [level=3] [ref=e396]
+            - list [ref=e397]:
+              - listitem [ref=e398]:
+                - link "资源库" [ref=e399] [cursor=pointer]:
+                  - /url: /resources
+              - listitem [ref=e400]:
+                - link "分类浏览" [ref=e401] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e402]:
+                - link "管理后台" [ref=e403] [cursor=pointer]:
+                  - /url: /admin
+          - generic [ref=e404]:
+            - heading "支持" [level=3] [ref=e405]
+            - list [ref=e406]:
+              - listitem [ref=e407]:
+                - link "帮助中心" [ref=e408] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e409]:
+                - link "隐私政策" [ref=e410] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e411]:
+                - link "使用条款" [ref=e412] [cursor=pointer]:
+                  - /url: /terms
+              - listitem [ref=e413]:
+                - link "联系我们" [ref=e414] [cursor=pointer]:
+                  - /url: /contact
+        - paragraph [ref=e416]: © 2025 ResLibs. 保留所有权利。
+  - alert [ref=e417]
+```
