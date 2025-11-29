@@ -45,10 +45,17 @@ async function authenticate(request: NextRequest) {
   try {
     const decoded = jwt.verify(token, process.env.NEXTAUTH_SECRET || 'fallback-secret') as any
 
+    // 从JWT中提取sessionToken
+    const sessionToken = decoded.sessionToken
+
+    if (!sessionToken) {
+      throw new Error('无效的认证令牌格式')
+    }
+
     // 检查会话是否有效
     const session = await prisma.adminSession.findFirst({
       where: {
-        token,
+        token: sessionToken,
         userId: decoded.userId,
         expiresAt: {
           gt: new Date()

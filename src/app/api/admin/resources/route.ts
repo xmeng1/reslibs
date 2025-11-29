@@ -45,10 +45,17 @@ async function authenticate(request: NextRequest) {
   try {
     const decoded = jwt.verify(token, process.env.NEXTAUTH_SECRET || 'fallback-secret') as any
 
+    // 从JWT中提取sessionToken
+    const sessionToken = decoded.sessionToken
+
+    if (!sessionToken) {
+      throw new Error('无效的认证令牌格式')
+    }
+
     // 检查会话是否有效
     const session = await prisma.adminSession.findFirst({
       where: {
-        token,
+        token: sessionToken,
         userId: decoded.userId,
         expiresAt: {
           gt: new Date()
@@ -151,13 +158,19 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('获取资源列表错误:', error)
 
-    if (error instanceof Error) {
+    // 认证错误返回401
+    if (error instanceof Error && (
+      error.message.includes('未提供认证令牌') ||
+      error.message.includes('会话已过期') ||
+      error.message.includes('无效的认证令牌')
+    )) {
       return NextResponse.json(
         { error: error.message },
         { status: 401 }
       )
     }
 
+    // 其他错误返回500
     return NextResponse.json(
       { error: '服务器内部错误' },
       { status: 500 }
@@ -268,13 +281,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (error instanceof Error) {
+    // 认证错误返回401
+    if (error instanceof Error && (
+      error.message.includes('未提供认证令牌') ||
+      error.message.includes('会话已过期') ||
+      error.message.includes('无效的认证令牌')
+    )) {
       return NextResponse.json(
         { error: error.message },
         { status: 401 }
       )
     }
 
+    // 其他错误返回500
     return NextResponse.json(
       { error: '服务器内部错误' },
       { status: 500 }

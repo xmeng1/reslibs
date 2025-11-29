@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@prisma/client'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+import { randomBytes } from 'crypto'
 
 const prisma = new PrismaClient()
 
@@ -42,12 +43,16 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 生成JWT token
-    const token = jwt.sign(
+    // 生成随机的session token
+    const sessionToken = randomBytes(32).toString('hex')
+
+    // 生成JWT token用于API响应
+    const jwtToken = jwt.sign(
       {
         userId: user.id,
         username: user.username,
-        role: user.role
+        role: user.role,
+        sessionToken
       },
       process.env.NEXTAUTH_SECRET || 'fallback-secret',
       { expiresIn: '24h' }
@@ -62,10 +67,17 @@ export async function POST(request: NextRequest) {
       }
     })
 
+    // 清理该用户的旧会话记录，避免token唯一约束冲突
+    await prisma.adminSession.deleteMany({
+      where: {
+        userId: user.id
+      }
+    })
+
     // 创建会话记录
     await prisma.adminSession.create({
       data: {
-        token,
+        token: sessionToken,
         userId: user.id,
         expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24小时后过期
         ipAddress: request.ip || 'unknown',
@@ -96,7 +108,7 @@ export async function POST(request: NextRequest) {
           role: user.role,
           avatar: user.avatar
         },
-        token
+        token: jwtToken
       }
     })
 
