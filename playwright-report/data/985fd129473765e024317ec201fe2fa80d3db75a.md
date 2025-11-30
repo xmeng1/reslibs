@@ -1,0 +1,221 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "← 返回仪表板" [ref=e8] [cursor=pointer]:
+          - /url: /admin/dashboard
+        - heading "资源管理" [level=1] [ref=e9]
+      - link "添加资源" [ref=e11] [cursor=pointer]:
+        - /url: /admin/resources/new
+        - button "添加资源" [ref=e12]:
+          - img
+          - generic [ref=e13]: 添加资源
+    - generic [ref=e14]:
+      - generic [ref=e17]:
+        - generic [ref=e19]:
+          - img [ref=e20]
+          - textbox "搜索资源标题或描述..." [ref=e23]
+        - generic [ref=e24]:
+          - combobox [ref=e25]:
+            - option "所有状态" [selected]
+            - option "已发布"
+            - option "草稿"
+            - option "已归档"
+          - button "筛选" [ref=e26] [cursor=pointer]:
+            - img
+            - text: 筛选
+      - generic [ref=e27]:
+        - generic [ref=e30]:
+          - img [ref=e31]
+          - generic [ref=e34]:
+            - paragraph [ref=e35]: "6"
+            - paragraph [ref=e36]: 总资源数
+        - generic [ref=e39]:
+          - img [ref=e40]
+          - generic [ref=e43]:
+            - paragraph [ref=e44]: 185,889
+            - paragraph [ref=e45]: 总浏览量
+        - generic [ref=e48]:
+          - img [ref=e49]
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: 47,586
+            - paragraph [ref=e54]: 总下载量
+        - generic [ref=e57]:
+          - img [ref=e58]
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: "6"
+            - paragraph [ref=e63]: 已发布
+      - generic [ref=e64]:
+        - generic [ref=e66]: 资源列表
+        - table [ref=e69]:
+          - rowgroup [ref=e70]:
+            - row "资源 类型 分类 状态 统计 创建时间 操作" [ref=e71]:
+              - columnheader "资源" [ref=e72]
+              - columnheader "类型" [ref=e73]
+              - columnheader "分类" [ref=e74]
+              - columnheader "状态" [ref=e75]
+              - columnheader "统计" [ref=e76]
+              - columnheader "创建时间" [ref=e77]
+              - columnheader "操作" [ref=e78]
+          - rowgroup [ref=e79]:
+            - row "已更新的资源标题 /react-development-complete-guide-1764445078258-bsvl2mytj 📚 文档资料 Web开发 已发布 👁 56436 ⬇ 9876 11/29/2025" [ref=e80]:
+              - cell "已更新的资源标题 /react-development-complete-guide-1764445078258-bsvl2mytj" [ref=e81]:
+                - generic [ref=e82]:
+                  - paragraph [ref=e83]: 已更新的资源标题
+                  - paragraph [ref=e84]: /react-development-complete-guide-1764445078258-bsvl2mytj
+              - cell "📚 文档资料" [ref=e85]:
+                - generic [ref=e86]:
+                  - generic [ref=e87]: 📚
+                  - generic [ref=e88]: 文档资料
+              - cell "Web开发" [ref=e89]
+              - cell "已发布" [ref=e90]:
+                - generic [ref=e91]: 已发布
+              - cell "👁 56436 ⬇ 9876" [ref=e92]:
+                - generic [ref=e93]:
+                  - paragraph [ref=e94]: 👁 56436
+                  - paragraph [ref=e95]: ⬇ 9876
+              - cell "11/29/2025" [ref=e96]:
+                - paragraph [ref=e98]: 11/29/2025
+              - cell [ref=e99]:
+                - generic [ref=e100]:
+                  - link [ref=e101] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1joz0027wbmn2c2aeaz3/edit
+                    - button [ref=e102]:
+                      - img
+                  - button [ref=e103] [cursor=pointer]:
+                    - img
+            - row "RPG游戏背景音乐集 /rpg-game-background-music-collection-1764445078243-5dpo5ff5t 🎵 音频音乐 游戏开发 已发布 👁 12769 ⬇ 4321 11/29/2025" [ref=e104]:
+              - cell "RPG游戏背景音乐集 /rpg-game-background-music-collection-1764445078243-5dpo5ff5t" [ref=e105]:
+                - generic [ref=e106]:
+                  - paragraph [ref=e107]: RPG游戏背景音乐集
+                  - paragraph [ref=e108]: /rpg-game-background-music-collection-1764445078243-5dpo5ff5t
+              - cell "🎵 音频音乐" [ref=e109]:
+                - generic [ref=e110]:
+                  - generic [ref=e111]: 🎵
+                  - generic [ref=e112]: 音频音乐
+              - cell "游戏开发" [ref=e113]
+              - cell "已发布" [ref=e114]:
+                - generic [ref=e115]: 已发布
+              - cell "👁 12769 ⬇ 4321" [ref=e116]:
+                - generic [ref=e117]:
+                  - paragraph [ref=e118]: 👁 12769
+                  - paragraph [ref=e119]: ⬇ 4321
+              - cell "11/29/2025" [ref=e120]:
+                - paragraph [ref=e122]: 11/29/2025
+              - cell [ref=e123]:
+                - generic [ref=e124]:
+                  - link [ref=e125] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1jok001xwbmn8cevseio/edit
+                    - button [ref=e126]:
+                      - img
+                  - button [ref=e127] [cursor=pointer]:
+                    - img
+            - row "Unity游戏开发完整教程 /unity-game-development-complete-course-1764445078225-dytfvnwq1 📹 视频课程 游戏开发 已发布 👁 32114 ⬇ 6543 11/29/2025" [ref=e128]:
+              - cell "Unity游戏开发完整教程 /unity-game-development-complete-course-1764445078225-dytfvnwq1" [ref=e129]:
+                - generic [ref=e130]:
+                  - paragraph [ref=e131]: Unity游戏开发完整教程
+                  - paragraph [ref=e132]: /unity-game-development-complete-course-1764445078225-dytfvnwq1
+              - cell "📹 视频课程" [ref=e133]:
+                - generic [ref=e134]:
+                  - generic [ref=e135]: 📹
+                  - generic [ref=e136]: 视频课程
+              - cell "游戏开发" [ref=e137]
+              - cell "已发布" [ref=e138]:
+                - generic [ref=e139]: 已发布
+              - cell "👁 32114 ⬇ 6543" [ref=e140]:
+                - generic [ref=e141]:
+                  - paragraph [ref=e142]: 👁 32114
+                  - paragraph [ref=e143]: ⬇ 6543
+              - cell "11/29/2025" [ref=e144]:
+                - paragraph [ref=e146]: 11/29/2025
+              - cell [ref=e147]:
+                - generic [ref=e148]:
+                  - link [ref=e149] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1jo2001nwbmnxnt9tv3h/edit
+                    - button [ref=e150]:
+                      - img
+                  - button [ref=e151] [cursor=pointer]:
+                    - img
+            - row "Modern UI Design System /modern-ui-design-system-components-1764445078209-qhpxn6crd 🎨 设计素材 设计创意 已发布 👁 23461 ⬇ 8765 11/29/2025" [ref=e152]:
+              - cell "Modern UI Design System /modern-ui-design-system-components-1764445078209-qhpxn6crd" [ref=e153]:
+                - generic [ref=e154]:
+                  - paragraph [ref=e155]: Modern UI Design System
+                  - paragraph [ref=e156]: /modern-ui-design-system-components-1764445078209-qhpxn6crd
+              - cell "🎨 设计素材" [ref=e157]:
+                - generic [ref=e158]:
+                  - generic [ref=e159]: 🎨
+                  - generic [ref=e160]: 设计素材
+              - cell "设计创意" [ref=e161]
+              - cell "已发布" [ref=e162]:
+                - generic [ref=e163]: 已发布
+              - cell "👁 23461 ⬇ 8765" [ref=e164]:
+                - generic [ref=e165]:
+                  - paragraph [ref=e166]: 👁 23461
+                  - paragraph [ref=e167]: ⬇ 8765
+              - cell "11/29/2025" [ref=e168]:
+                - paragraph [ref=e170]: 11/29/2025
+              - cell [ref=e171]:
+                - generic [ref=e172]:
+                  - link [ref=e173] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1jnl001bwbmnas9z44ir/edit
+                    - button [ref=e174]:
+                      - img
+                  - button [ref=e175] [cursor=pointer]:
+                    - img
+            - row "Blender 3D 建模软件 /blender-3d-modeling-tool-1764445078194-n5stqo4o9 ⚙️ 软件工具 开发工具 已发布 👁 45683 ⬇ 15234 11/29/2025" [ref=e176]:
+              - cell "Blender 3D 建模软件 /blender-3d-modeling-tool-1764445078194-n5stqo4o9" [ref=e177]:
+                - generic [ref=e178]:
+                  - paragraph [ref=e179]: Blender 3D 建模软件
+                  - paragraph [ref=e180]: /blender-3d-modeling-tool-1764445078194-n5stqo4o9
+              - cell "⚙️ 软件工具" [ref=e181]:
+                - generic [ref=e182]:
+                  - generic [ref=e183]: ⚙️
+                  - generic [ref=e184]: 软件工具
+              - cell "开发工具" [ref=e185]
+              - cell "已发布" [ref=e186]:
+                - generic [ref=e187]: 已发布
+              - cell "👁 45683 ⬇ 15234" [ref=e188]:
+                - generic [ref=e189]:
+                  - paragraph [ref=e190]: 👁 45683
+                  - paragraph [ref=e191]: ⬇ 15234
+              - cell "11/29/2025" [ref=e192]:
+                - paragraph [ref=e194]: 11/29/2025
+              - cell [ref=e195]:
+                - generic [ref=e196]:
+                  - link [ref=e197] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1jn60011wbmn4y5wjq7i/edit
+                    - button [ref=e198]:
+                      - img
+                  - button [ref=e199] [cursor=pointer]:
+                    - img
+            - row "Low Poly Shooter Pack /low-poly-shooter-pack-1764445077952-sd6mq56jx 🎮 Unity Assets 游戏开发 已发布 👁 15426 ⬇ 2847 11/29/2025" [ref=e200]:
+              - cell "Low Poly Shooter Pack /low-poly-shooter-pack-1764445077952-sd6mq56jx" [ref=e201]:
+                - generic [ref=e202]:
+                  - paragraph [ref=e203]: Low Poly Shooter Pack
+                  - paragraph [ref=e204]: /low-poly-shooter-pack-1764445077952-sd6mq56jx
+              - cell "🎮 Unity Assets" [ref=e205]:
+                - generic [ref=e206]:
+                  - generic [ref=e207]: 🎮
+                  - generic [ref=e208]: Unity Assets
+              - cell "游戏开发" [ref=e209]
+              - cell "已发布" [ref=e210]:
+                - generic [ref=e211]: 已发布
+              - cell "👁 15426 ⬇ 2847" [ref=e212]:
+                - generic [ref=e213]:
+                  - paragraph [ref=e214]: 👁 15426
+                  - paragraph [ref=e215]: ⬇ 2847
+              - cell "11/29/2025" [ref=e216]:
+                - paragraph [ref=e218]: 11/29/2025
+              - cell [ref=e219]:
+                - generic [ref=e220]:
+                  - link [ref=e221] [cursor=pointer]:
+                    - /url: /admin/resources/cmikp1jgi000pwbmnf9fu1xuq/edit
+                    - button [ref=e222]:
+                      - img
+                  - button [ref=e223] [cursor=pointer]:
+                    - img
+```
