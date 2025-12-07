@@ -105,3 +105,7 @@ out/
 # IDE
 .vscode/
 .idea/
+automation/__pycache__/
+data/
+logs/
+temp/
